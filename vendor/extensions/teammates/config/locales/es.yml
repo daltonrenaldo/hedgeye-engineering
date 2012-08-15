@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      teammates:
+        title: Teammates
+#        article: masculino/femenino
+    teammates:
+      admin:
+        teammates:
+          actions:
+            create_new: Crear nuevo teammate
+            reorder: Reordenar teammates
+            reorder_done: Reordenación de teammates completada
+          records:
+            title: Teammates
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay teammates todavía. Pulsa en "Crear nuevo Teammate" para crear tu primer teammate.
+          teammate:
+            view_live_html: Ver este teammate como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este teammate
+            delete: Borrar este teammate para siempre
+      teammates:
+        show:
+          other: Otros teammates
+  activerecord:
+    attributes:
+      'refinery/teammates/teammate':
+        title: Title
+        name: Name
+        email: Email
+        picture: Picture
+        bio: Bio

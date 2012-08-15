@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      teammates:
+        title: Teammates
+    teammates:
+      admin:
+        teammates:
+          actions:
+            create_new: Add New Teammate
+            reorder: Reorder Teammates
+            reorder_done: Done Reordering Teammates
+          records:
+            title: Teammates
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Teammates yet. Click "Add New Teammate" to add your first teammate.
+          teammate:
+            view_live_html: View this teammate live <br/><em>(opens in a new window)</em>
+            edit: Edit this teammate
+            delete: Remove this teammate forever
+      teammates:
+        show:
+          other: Other Teammates
+  activerecord:
+    attributes:
+      'refinery/teammates/teammate':
+        title: Title
+        name: Name
+        email: Email
+        picture: Picture
+        bio: Bio

@@ -1,0 +1,54 @@
+<div class="row">
+	<section id="social" class="one-third column">
+		<h3><%= copywriting('social media heading text', { :scope => 'footer', :default => 'follow us' }) %></h3>
+		<%= render_social_networks %>
+	</section>
+
+  <section id="events" class="one-third column">
+    <h3><%= copywriting('events heading text', { :scope => 'footer', :default => 'come see us (events)' }) %></h3>
+    <%= render_events %>
+  </section>
+  
+	<section id="tweets" class="one-third column omega">
+		<h3><%= copywriting('tweets heading text', { :scope => 'footer', :default => 'recent tweets' }) %></h3>
+		<ul>
+			<li>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt <span>by</span> <a href="#">Johnny</a> <span>via</span> <a href="#">TweetDeck</a></p>
+			</li>
+			<li>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt <span>by</span> <a href="#">T-bone</a> <span>via</span> <a href="#">Tweetdroid</a></p>
+			</li>
+		</ul>
+	</section>
+</div>
+<div class="row remove-bottom">
+	<section id="process-links" class="one-third column">
+		<h3>how we work</h3>
+		<ul class="link-list">
+			<li><a href="#">this is a link</a></li>
+			<li><a href="#">another link</a></li>
+			<li><a href="#">yet another a link</a></li>
+			<li><a href="#">you get it</a></li>
+			<li><a href="#">links</a></li>
+		</ul>
+	</section>
+	<section id="links" class="one-third column">
+		<h3>important links</h3>
+		<ul class="link-list">
+			<li><a href="#">this is a link</a></li>
+			<li><a href="#">another link</a></li>
+			<li><a href="#">yet another a link</a></li>
+			<li><a href="#">you get it</a></li>
+			<li><a href="#">links</a></li>
+		</ul>
+	</section>
+	<section id="contact" class="one-third column omega">
+		<h3>contact us</h3>
+		<ul class="contact-info">
+			<li class="dark-box">Email: <a href="#"><%= copywriting('email', { :scope => 'footer', :default => 'hedgeye-dev@hedgeye.com' }) %></a></li>
+			<li class="dark-box">Phone: <span class="links"><%= copywriting('phone number', { :scope => 'footer', :default => '1-800-888-5555' }) %></span></li>
+			<li class="dark-box">Fax: <span class="links"><%= copywriting('fax', { :scope => 'footer', :default => '1-800-888-6666' }) %></span></li>
+			<li class="dark-box">Or contact us via our <a href="#">contact page</a></li>
+		</ul>
+	</section>
+</div>

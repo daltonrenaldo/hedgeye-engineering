@@ -1,0 +1,62 @@
+<% content_for :body_content_title do %>
+  <h3 class="hedgeye-blue"><%= @teammate.title %></h3>
+<% end %>
+
+<% content_for :body do %>
+  <section id="teammate">
+    <table id="teammate-info">
+      <tr>
+        <td style="text-align: right">
+          <%= raw @teammate.name %>
+        </td>
+        <td class="hedgeye-blue"> :Name</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">
+          <%= raw @teammate.email %>
+        </td>
+        <td class="hedgeye-blue"> :Email</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">
+          <%= raw @teammate.bio %>
+        </td>
+        <td class="hedgeye-blue"> :Biography</td>
+      </tr>
+      <tr>
+    </table>
+    <%= image_fu @teammate.picture, nil %>
+    <div class="clearfix"></div>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="teammates">
+      <% @teammates.each do |teammate| %>
+        <li>
+          <%= link_to teammate.title, refinery.teammates_teammate_path(teammate) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+<style type="text/css">
+#teammate img {
+border-radius: 5px;
+width: 120px;
+height: 150px;
+float:left;
+}
+#teammate{
+  width:420px;
+}
+#teammate-info td {
+padding: 2px 3px;
+}
+#teammate-info {
+width: 300px;
+float:right;
+}</style>
+<%= render '/refinery/content_page' %>

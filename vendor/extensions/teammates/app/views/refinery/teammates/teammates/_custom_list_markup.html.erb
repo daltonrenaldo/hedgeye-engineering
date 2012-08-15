@@ -1,0 +1,17 @@
+<ul class="bios">
+  <% @teammates.each do |teammate| %>
+    <%= image_fu teammate.picture, '70x70#c', {:class => 'column'} %>
+    <h4><%= teammate.title %></h4>
+    <ul>
+      <li><span>Name:</span> <%= teammate.name %></li>
+      <li><span>Bio:</span> <%= teammate.bio.gsub('<p>', '').gsub('</p>', '').truncate(70) %></li>
+    </ul>
+  </li>
+  <% end %>
+</ul>
+
+
+<ul class="list-nav" id="nav-list">
+	<li><a href="#"><img id="left-arrow" src="<%=image_path('left-inactive-arrow.png')%>"></a></li>
+	<li><a href="#"><img id="right-arrow" src="<%=image_path('right-active-arrow.png')%>"></a></li>
+</ul>

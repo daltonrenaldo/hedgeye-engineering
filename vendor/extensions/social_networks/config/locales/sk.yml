@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      social_networks:
+        title: Social Networks
+    social_networks:
+      admin:
+        social_networks:
+          actions:
+            create_new: Pridať Social Network
+            reorder: Preusporiadať Social Networks
+            reorder_done: Koniec radenia Social Networks
+          records:
+            title: Social Networks
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Social Networks. Kliknite na "Pridať Social Network" pre pridanie prvého social network.
+          social_network:
+            view_live_html: Zobraziť náhľad social network<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť social network
+            delete: Zmazať social network
+      social_networks:
+        show:
+          other: Daľšie Social Networks
+  activerecord:
+    attributes:
+      'refinery/social_networks/social_network':
+        name: Name
+        profile_url: Profile Url
+        icon: Icon

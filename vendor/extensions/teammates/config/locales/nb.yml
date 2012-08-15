@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      teammates:
+        title: Teammates
+    teammates:
+      admin:
+        teammates:
+          actions:
+            create_new: Lag en ny Teammate
+            reorder: Endre rekkefølgen på Teammates
+            reorder_done: Ferdig å endre rekkefølgen Teammates
+          records:
+            title: Teammates
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Teammates enda. Klikk på "Lag en ny Teammate" for å legge til din første teammate.
+          teammate:
+            view_live_html: Vis hvordan denne teammate ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne teammate
+            delete: Fjern denne teammate permanent
+      teammates:
+        show:
+          other: Andre Teammates
+  activerecord:
+    attributes:
+      'refinery/teammates/teammate':
+        title: Title
+        name: Name
+        email: Email
+        picture: Picture
+        bio: Bio

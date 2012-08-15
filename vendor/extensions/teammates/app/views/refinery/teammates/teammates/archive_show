@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @teammate.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @teammate.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @teammate.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Email</h1>
+    <p>
+      <%=raw @teammate.email %>
+    </p>
+  </section>
+  <section>
+    <h1>Picture</h1>
+    <p>
+      <%= image_fu @teammate.picture, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Bio</h1>
+    <p>
+      <%=raw @teammate.bio %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="teammates">
+      <% @teammates.each do |teammate| %>
+        <li>
+          <%= link_to teammate.title, refinery.teammates_teammate_path(teammate) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

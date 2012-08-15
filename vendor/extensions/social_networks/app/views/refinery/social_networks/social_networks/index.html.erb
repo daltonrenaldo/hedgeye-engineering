@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="social_networks">
+    <% @social_networks.each do |social_network| %>
+      <li>
+        <%= link_to social_network.name, refinery.social_networks_social_network_path(social_network) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

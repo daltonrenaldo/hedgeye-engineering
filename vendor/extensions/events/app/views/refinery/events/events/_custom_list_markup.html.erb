@@ -1,0 +1,8 @@
+<ul>
+  <% @events.each do |event| %>
+    <li>
+      <a href="/events/<%=event.id%>"><div class="event-date dark-box column"><p><%= event.date.strftime("%b %d") %></p></div></a>
+      <p><%= event.teaser %> <span class="italic">at</span> <a target="_blank" href="http://maps.google.com/maps?q=<%=event.full_address%>"><%= event.city %>, <%= event.state %></a></p>
+    </li>
+  <% end %>
+</ul>

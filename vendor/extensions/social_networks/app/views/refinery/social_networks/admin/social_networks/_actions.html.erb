@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::SocialNetworks::Admin::SocialNetworksController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.social_networks_admin_social_networks_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_social_networks_admin_social_network_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::SocialNetworks::Admin::SocialNetworksController.sortable? && ::Refinery::SocialNetworks::SocialNetwork.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Social Networks"),
+                 refinery.social_networks_admin_social_networks_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Social Networks"),
+                 refinery.social_networks_admin_social_networks_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

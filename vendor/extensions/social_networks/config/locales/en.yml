@@ -1,0 +1,29 @@
+en:
+  refinery:
+    plugins:
+      social_networks:
+        title: Social Networks
+    social_networks:
+      admin:
+        social_networks:
+          actions:
+            create_new: Add New Social Network
+            reorder: Reorder Social Networks
+            reorder_done: Done Reordering Social Networks
+          records:
+            title: Social Networks
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Social Networks yet. Click "Add New Social Network" to add your first social network.
+          social_network:
+            view_live_html: View this social network live <br/><em>(opens in a new window)</em>
+            edit: Edit this social network
+            delete: Remove this social network forever
+      social_networks:
+        show:
+          other: Other Social Networks
+  activerecord:
+    attributes:
+      'refinery/social_networks/social_network':
+        name: Name
+        profile_url: Profile Url
+        icon: Icon

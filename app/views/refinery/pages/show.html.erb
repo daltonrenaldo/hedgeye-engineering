@@ -1,0 +1,12 @@
+<section id="main-section">
+	<section class="one-third column sidebar">
+    <% if @page.slug == "about" %>
+      <h3>who we are</h3>
+      <%= render_teammates %>
+    <% end %>
+	</section>
+	
+	<section class="two-thirds column omega">
+		<%=raw @page.content_for(:body)%>
+	</section>
+</section>

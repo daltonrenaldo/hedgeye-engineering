@@ -1,0 +1,5 @@
+<ul>
+  <% @social_networks.each do |social| %>
+	  <li><a target="_blank" href="<%= social.profile_url %>"><%= image_fu social.icon %></a></li>
+  <% end %>
+</ul>
