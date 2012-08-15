@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      perks:
+        title: Perks
+    perks:
+      admin:
+        perks:
+          actions:
+            create_new: Add New Perk
+            reorder: Reorder Perks
+            reorder_done: Done Reordering Perks
+          records:
+            title: Perks
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Perks yet. Click "Add New Perk" to add your first perk.
+          perk:
+            view_live_html: View this perk live <br/><em>(opens in a new window)</em>
+            edit: Edit this perk
+            delete: Remove this perk forever
+      perks:
+        show:
+          other: Other Perks
+  activerecord:
+    attributes:
+      'refinery/perks/perk':
+        title: Title
+        description: Description
+        teaser: Teaser
+        teaser_image: Teaser Image

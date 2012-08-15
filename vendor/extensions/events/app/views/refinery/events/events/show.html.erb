@@ -1,67 +1,38 @@
 <% content_for :body_content_title do %>
-  <%= @event.title %>
+  <h3><%= @event.title %></h3>
 <% end %>
 
 <% content_for :body do %>
+<section class="two-thirds sidebar right-bar column alpha" style="padding-right:10px">
   <section>
-    <h1>Title</h1>
     <p>
-      <%=raw @event.title %>
+      <ul class="small-font">
+        <li>Date: <span class="hedgeye-blue"><%=raw @event.date.strftime("%m/%d/%Y") %></span></li>
+        <li>Time: <span class="hedgeye-blue"><%=raw @event.date.strftime("%I:%M%p") %></span></li>
+        <li>Address: <a href="http://maps.google.com/maps?q=<%=@event.full_address%>"><span class="hedgeye-blue">
+          <%=raw @event.address %>,
+          <%=raw @event.city %>,
+          <%=raw @event.state %>,
+          <%=raw @event.zip %>
+        </span></a></li>
+      </ul>
     </p>
   </section>
   <section>
-    <h1>Date</h1>
-    <p>
-      <%=raw @event.date %>
-    </p>
+    <%= image_fu @event.photo, '600x150#c', {:class => 'resize-mobile'} %>
   </section>
   <section>
-    <h1>Address</h1>
-    <p>
-      <%=raw @event.address %>
-    </p>
-  </section>
-  <section>
-    <h1>City</h1>
-    <p>
-      <%=raw @event.city %>
-    </p>
-  </section>
-  <section>
-    <h1>State</h1>
-    <p>
-      <%=raw @event.state %>
-    </p>
-  </section>
-  <section>
-    <h1>Zip</h1>
-    <p>
-      <%=raw @event.zip %>
-    </p>
-  </section>
-  <section>
-    <h1>Photo</h1>
-    <p>
-      <%= image_fu @event.photo, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
+    <h4>Description</h4>
     <p>
       <%=raw @event.description %>
     </p>
   </section>
-  <section>
-    <h1>Teaser</h1>
-    <p>
-      <%=raw @event.teaser %>
-    </p>
-  </section>
+</section>
 <% end %>
 
 <% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
+  <section class="one-third column omega">
+    <h3><%= t('.other') %></h3>
     <ul id="events">
       <% @events.each do |event| %>
         <li>
@@ -69,7 +40,7 @@
         </li>
       <% end %>
     </ul>
-  </aside>
+  </section>
 <% end %>
 
 <%= render '/refinery/content_page' %>

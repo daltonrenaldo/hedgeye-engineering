@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      perks:
+        title: Perks
+    perks:
+      admin:
+        perks:
+          actions:
+            create_new: Pridať Perk
+            reorder: Preusporiadať Perks
+            reorder_done: Koniec radenia Perks
+          records:
+            title: Perks
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Perks. Kliknite na "Pridať Perk" pre pridanie prvého perk.
+          perk:
+            view_live_html: Zobraziť náhľad perk<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť perk
+            delete: Zmazať perk
+      perks:
+        show:
+          other: Daľšie Perks
+  activerecord:
+    attributes:
+      'refinery/perks/perk':
+        title: Title
+        description: Description
+        teaser: Teaser
+        teaser_image: Teaser Image

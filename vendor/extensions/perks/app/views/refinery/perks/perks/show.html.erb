@@ -1,0 +1,24 @@
+<% content_for :body_content_title do %>
+  <h3><%= @perk.title %></h3>
+<% end %>
+
+<% content_for :body do %>
+  <section class="two-thirds sidebar right-bar column alpha" style="padding-right:10px">
+    <%= image_fu @perk.teaser_image, '250x180#c', {:class => 'column', :style => 'float: right'} %>
+    <%=raw @perk.description %>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <section class="one-third column omega">
+    <h3><%= t('.other') %></h3>
+    <ul id="perks">
+      <% @perks.each do |perk| %>
+        <li>
+          <%= link_to perk.title, refinery.perks_perk_path(perk) %>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Perks::Admin::PerksController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.perks_admin_perks_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_perks_admin_perk_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Perks::Admin::PerksController.sortable? && ::Refinery::Perks::Perk.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Perks"),
+                 refinery.perks_admin_perks_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Perks"),
+                 refinery.perks_admin_perks_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

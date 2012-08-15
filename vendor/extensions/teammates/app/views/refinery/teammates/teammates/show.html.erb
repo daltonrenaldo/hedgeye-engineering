@@ -1,38 +1,21 @@
 <% content_for :body_content_title do %>
-  <h3 class="hedgeye-blue"><%= @teammate.title %></h3>
+  <h3 class="hedgeye-blue"><%=raw @teammate.title %></h3>
 <% end %>
 
 <% content_for :body do %>
-  <section id="teammate">
-    <table id="teammate-info">
-      <tr>
-        <td style="text-align: right">
-          <%= raw @teammate.name %>
-        </td>
-        <td class="hedgeye-blue"> :Name</td>
-      </tr>
-      <tr>
-        <td style="text-align: right">
-          <%= raw @teammate.email %>
-        </td>
-        <td class="hedgeye-blue"> :Email</td>
-      </tr>
-      <tr>
-        <td style="text-align: right">
-          <%= raw @teammate.bio %>
-        </td>
-        <td class="hedgeye-blue"> :Biography</td>
-      </tr>
-      <tr>
-    </table>
-    <%= image_fu @teammate.picture, nil %>
-    <div class="clearfix"></div>
+  <section id="teammate" class="two-thirds right-bar column alpha" style="padding-right:10px">
+    <%= fetch_teammate_picture(@teammate) %>
+    <ul>
+      <li><%= raw @teammate.name %></li>
+      <li><%= raw @teammate.email %></li>
+      <li><%= raw @teammate.bio %></li>
+    </ul>
   </section>
 <% end %>
 
 <% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
+  <section class="one-third column omega">
+    <h3><%= t('.other') %></h3>
     <ul id="teammates">
       <% @teammates.each do |teammate| %>
         <li>
@@ -40,23 +23,9 @@
         </li>
       <% end %>
     </ul>
-  </aside>
+  </section>
 <% end %>
+
 <style type="text/css">
-#teammate img {
-border-radius: 5px;
-width: 120px;
-height: 150px;
-float:left;
-}
-#teammate{
-  width:420px;
-}
-#teammate-info td {
-padding: 2px 3px;
-}
-#teammate-info {
-width: 300px;
-float:right;
-}</style>
+</style>
 <%= render '/refinery/content_page' %>

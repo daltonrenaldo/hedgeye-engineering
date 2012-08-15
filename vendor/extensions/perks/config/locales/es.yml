@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      perks:
+        title: Perks
+#        article: masculino/femenino
+    perks:
+      admin:
+        perks:
+          actions:
+            create_new: Crear nuevo perk
+            reorder: Reordenar perks
+            reorder_done: Reordenación de perks completada
+          records:
+            title: Perks
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay perks todavía. Pulsa en "Crear nuevo Perk" para crear tu primer perk.
+          perk:
+            view_live_html: Ver este perk como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este perk
+            delete: Borrar este perk para siempre
+      perks:
+        show:
+          other: Otros perks
+  activerecord:
+    attributes:
+      'refinery/perks/perk':
+        title: Title
+        description: Description
+        teaser: Teaser
+        teaser_image: Teaser Image

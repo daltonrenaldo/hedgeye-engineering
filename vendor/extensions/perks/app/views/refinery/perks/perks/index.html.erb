@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="perks">
+    <% @perks.each do |perk| %>
+      <li>
+        <%= link_to perk.title, refinery.perks_perk_path(perk) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

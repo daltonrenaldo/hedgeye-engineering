@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      perks:
+        title: Perks
+    perks:
+      admin:
+        perks:
+          actions:
+            create_new: Lag en ny Perk
+            reorder: Endre rekkefølgen på Perks
+            reorder_done: Ferdig å endre rekkefølgen Perks
+          records:
+            title: Perks
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Perks enda. Klikk på "Lag en ny Perk" for å legge til din første perk.
+          perk:
+            view_live_html: Vis hvordan denne perk ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne perk
+            delete: Fjern denne perk permanent
+      perks:
+        show:
+          other: Andre Perks
+  activerecord:
+    attributes:
+      'refinery/perks/perk':
+        title: Title
+        description: Description
+        teaser: Teaser
+        teaser_image: Teaser Image

@@ -1,0 +1,13 @@
+<ul class="perks">
+  <% @perks.each do |perk| %>
+    <li>
+      <%=link_to image_fu(perk.teaser_image, '70x70#c', {:class => 'column'}), refinery.perks_perk_path(perk) if perk.teaser_image %>
+      <h4><%= link_to perk.title, refinery.perks_perk_path(perk) %></h4>
+      <% if !perk.teaser.blank? %>
+        <p><%= perk.teaser %></p>
+      <% else %>
+        <p><%= perk.description.gsub('<p>', '').gsub('</p>', '').truncate(70) %></p>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -7,6 +7,8 @@ module Refinery
 
       acts_as_indexed :fields => [:title, :address, :city, :state, :description, :teaser]
 
+      validates_presence_of :description
+
       validates :title, :presence => true, :uniqueness => true
 
       belongs_to :photo, :class_name => '::Refinery::Image'

@@ -9,9 +9,6 @@
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
 
-# Added by Refinery CMS Blog engine
-Refinery::Blog::Engine.load_seed
-
 # Added by Refinery CMS Teammates extension
 Refinery::Teammates::Engine.load_seed
 
@@ -23,3 +20,6 @@ Refinery::Events::Engine.load_seed
 
 # Added by Refinery CMS Social Networks extension
 Refinery::SocialNetworks::Engine.load_seed
+
+# Added by Refinery CMS Perks extension
+Refinery::Perks::Engine.load_seed
