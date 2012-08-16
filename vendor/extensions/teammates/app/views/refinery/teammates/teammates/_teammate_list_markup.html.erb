@@ -14,8 +14,13 @@
   <% end %>
 </ul>
 
+<%= will_paginate @teammates, :page_links => false %>
+<!-- TODO: 
+  1. Do pagination with Ajax, Looks more professional 
+  2. Make pagination links use pictures below
+-->
 
-<ul class="list-nav" id="nav-list">
+<!-- <ul class="list-nav" id="nav-list">
 	<li><a href="#"><img id="left-arrow" src="<%= image_path('left-inactive-arrow.png') %>"></a></li>
 	<li><a href="#"><img id="right-arrow" src="<%= image_path('right-active-arrow.png') %>"></a></li>
-</ul>
+</ul> -->
