@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def render_perks
-    @perks = Refinery::Perks::Perk.all(:order => 'position ASC')
+    @perks = Refinery::Perks::Perk.paginate(:page => params[:page], :per_page => 1, :order => 'position ASC')
     render file: 'refinery/perks/perks/_custom_list_markup'
   end
 
@@ -16,8 +16,8 @@ module ApplicationHelper
   end
 
   def render_teammates
-    @teammates = Refinery::Teammates::Teammate.all(:order => 'position ASC')
-    render file: 'refinery/teammates/teammates/_custom_list_markup'
+    @teammates = Refinery::Teammates::Teammate.paginate(:page => params[:page], :per_page => 1, :order => 'position ASC')
+    render template: 'refinery/teammates/teammates/_teammate_list_markup'
   end
 
   # TODO: this probably should be somewhere in vendor/extensions/teammates
