@@ -5,9 +5,8 @@
   <% elsif @page.slug == "career" %>
     <h3>perks</h3>
     <%= render_perks %>
-  <% else %>
-    <%= raw @page.content_for(:side_body) %>
   <% end %>
+  <%= raw @page.content_for(:side_body) %>
 </section>
 
 <section class="two-thirds column omega">
