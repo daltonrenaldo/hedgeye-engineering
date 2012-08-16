@@ -16,7 +16,8 @@
 	#Page Styles
 	#Slider
 	#Media Queries
-	#Font-Face */
+	#Font-Face 
+	#Rails only crap*/
 
 /* #Imported CSS
 =================================================== */
@@ -198,11 +199,15 @@ footer #copyright{
 
 div.slider{
 	position:relative;
+	top: -30px;
 	margin-bottom: 30px;
 	overflow:hidden;
 }
 .slider ul>li{
 	/*position:absolute;*/
+}
+section#main-section .slider img{
+	border-radius: 0 0 5px 5px;
 }
 
 /* About */
@@ -317,3 +322,15 @@ section#main-section section.omega{
 	    font-weight: normal;
 	    font-style: normal; }
 */
+
+/* #Rails Only Crap
+================================================== */
+.pagination{
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.pagination span{
+	padding: 0 5px;
+}
