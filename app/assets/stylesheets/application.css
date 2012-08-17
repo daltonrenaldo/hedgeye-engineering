@@ -203,10 +203,8 @@ div.slider{
 	margin-bottom: 30px;
 	overflow:hidden;
 }
-.slider ul>li{
-	/*position:absolute;*/
-}
-section#main-section .slider img{
+
+section#main-section .slider img, .nivo-caption{
 	border-radius: 0 0 5px 5px;
 }
 

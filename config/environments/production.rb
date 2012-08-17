@@ -64,4 +64,13 @@ HedgeyeEngineering::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Turning S3 on
+  Refinery::Core.config.s3_backend = true
+
+  config.s3_backend = Refinery::Core.s3_backend
+  config.s3_bucket_name = ENV['S3_BUCKET']
+  config.s3_access_key_id = ENV['S3_KEY']
+  config.s3_secret_access_key = ENV['S3_SECRET']
+  # config.s3_region = ENV['S3_REGION]
 end

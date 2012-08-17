@@ -29,3 +29,6 @@ Refinery::Blog::Engine.load_seed
 
 # Added by Refinery CMS Twitter Accounts extension
 Refinery::TwitterAccounts::Engine.load_seed
+
+# Added by Refinery CMS Slides extension
+Refinery::Slides::Engine.load_seed

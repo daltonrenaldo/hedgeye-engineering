@@ -58,3 +58,4 @@ gem 'refinerycms-social_networks', :path => 'vendor/extensions'
 gem 'refinerycms-perks', :path => 'vendor/extensions'
 gem "friendly_id", "~> 4.0.1"
 gem 'refinerycms-twitter_accounts', :path => 'vendor/extensions'
+gem 'refinerycms-slides', :path => 'vendor/extensions'

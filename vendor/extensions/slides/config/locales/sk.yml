@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      slides:
+        title: Slides
+    slides:
+      admin:
+        slides:
+          actions:
+            create_new: Pridať Slide
+            reorder: Preusporiadať Slides
+            reorder_done: Koniec radenia Slides
+          records:
+            title: Slides
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Slides. Kliknite na "Pridať Slide" pre pridanie prvého slide.
+          slide:
+            view_live_html: Zobraziť náhľad slide<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť slide
+            delete: Zmazať slide
+      slides:
+        show:
+          other: Daľšie Slides
+  activerecord:
+    attributes:
+      'refinery/slides/slide':
+        title: Title
+        image: Image
+        caption: Caption
+        post_slug: Post Slug

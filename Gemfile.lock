@@ -5,6 +5,8 @@ PATH
       refinerycms-core (~> 2.0.6)
     refinerycms-perks (1.0)
       refinerycms-core (~> 2.0.6)
+    refinerycms-slides (1.0)
+      refinerycms-core (~> 2.0.6)
     refinerycms-social_networks (1.0)
       refinerycms-core (~> 2.0.6)
     refinerycms-teammates (1.0)
@@ -215,6 +217,7 @@ DEPENDENCIES
   refinerycms-events!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-perks!
+  refinerycms-slides!
   refinerycms-social_networks!
   refinerycms-teammates!
   refinerycms-twitter_accounts!

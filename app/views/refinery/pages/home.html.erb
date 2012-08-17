@@ -11,13 +11,18 @@
   </script>
 <% end %>
 
-<div class="slider-wrapper theme-light">
-  <div id="slider" class="slider nivoSlider">
-  	<img src="http://placehold.it/960X290" alt="#">
-    <img src="http://lorempixel.com/960/290/technics" alt="#" title="This is an example of a caption">
+<% if fetch_slides %>
+  <div class="slider-wrapper theme-light">
+    <div id="slider" class="slider nivoSlider">
+      <% @slides.each do |slide| %>
+        <%= image_fu slide.image, '960x290#c', {:title => slide.caption, :class => 'slide'} %>
+      <% end %> 
+    </div>
   </div>
-</div>
-<div class="clearfix"></div>
+  <div class="clearfix"></div>
+<% else %>
+  <div style="padding: 20px;"></div>
+<% end %>
 <section class="one-third column">
 	<h3>
 		<img src="http://placehold.it/30x30" alt="#">

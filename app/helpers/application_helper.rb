@@ -1,4 +1,15 @@
 module ApplicationHelper
+  def fetch_slides
+    @slides = Refinery::Slides::Slide.all(:order => 'position ASC')
+  end
+
+  def has_slides?
+    if Refinery::Slides::Slide.count == 0
+      false
+    else
+      true
+    end
+  end
   def render_events
     # get the 2 closest future events
     @events = Refinery::Events::Event.find(:all, :conditions => ['date > ?', Time.now ], :order => 'date ASC' )
@@ -6,7 +17,7 @@ module ApplicationHelper
   end
 
   def render_perks
-    @perks = Refinery::Perks::Perk.paginate(:page => params[:page], :per_page => 1, :order => 'position ASC')
+    @perks = Refinery::Perks::Perk.paginate(:page => params[:page], :per_page => 4, :order => 'position ASC')
     render file: 'refinery/perks/perks/_custom_list_markup'
   end
 
@@ -16,16 +27,22 @@ module ApplicationHelper
   end
 
   def render_teammates
-    @teammates = Refinery::Teammates::Teammate.paginate(:page => params[:page], :per_page => 1, :order => 'position ASC')
+    @teammates = Refinery::Teammates::Teammate.paginate(:page => params[:page], :per_page => 4, :order => 'position ASC')
     render template: 'refinery/teammates/teammates/_teammate_list_markup'
   end
 
   def render_tweets
     twitter_account = Refinery::TwitterAccounts::TwitterAccount.first
     screen_name = twitter_account.username
-    twitter_url = "http://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=#{screen_name}&count=2"
-    @json_tweets = JSON.parse(open(twitter_url).read())
-    render template: 'refinery/twitter_accounts/twitter_accounts/_tweets_template'
+    begin
+      twitter_url = "http://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=#{screen_name}&count=2"
+      @json_tweets = JSON.parse(open(twitter_url).read())
+      render template: 'refinery/twitter_accounts/twitter_accounts/_tweets_template'
+    rescue Exception => e
+      Rails.logger.error("Failed to retreive tweets from Twitter")
+      # TODO: probably good to load some default tweets here
+      nil
+    end
   end
 
   # TODO: this probably should be somewhere in vendor/extensions/teammates
