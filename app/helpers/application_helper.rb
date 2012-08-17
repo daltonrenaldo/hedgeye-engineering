@@ -12,12 +12,20 @@ module ApplicationHelper
 
   def render_social_networks
     @social_networks = Refinery::SocialNetworks::SocialNetwork.all(:order => 'position ASC')
-    render file: 'refinery/social_networks/social_networks/_list' 
+    render template: 'refinery/social_networks/social_networks/_list' 
   end
 
   def render_teammates
     @teammates = Refinery::Teammates::Teammate.paginate(:page => params[:page], :per_page => 1, :order => 'position ASC')
     render template: 'refinery/teammates/teammates/_teammate_list_markup'
+  end
+
+  def render_tweets
+    twitter_account = Refinery::TwitterAccounts::TwitterAccount.first
+    screen_name = twitter_account.username
+    twitter_url = "http://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=#{screen_name}&count=2"
+    @json_tweets = JSON.parse(open(twitter_url).read())
+    render template: 'refinery/twitter_accounts/twitter_accounts/_tweets_template'
   end
 
   # TODO: this probably should be somewhere in vendor/extensions/teammates

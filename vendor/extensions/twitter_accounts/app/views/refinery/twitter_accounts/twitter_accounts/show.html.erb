@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @twitter_account.username %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Username</h1>
+    <p>
+      <%=raw @twitter_account.username %>
+    </p>
+  </section>
+  <section>
+    <h1>Tweet Count</h1>
+    <p>
+      <%=raw @twitter_account.tweet_count %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="twitter_accounts">
+      <% @twitter_accounts.each do |twitter_account| %>
+        <li>
+          <%= link_to twitter_account.username, refinery.twitter_accounts_twitter_account_path(twitter_account) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

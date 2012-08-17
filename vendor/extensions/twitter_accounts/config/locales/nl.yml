@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      twitter_accounts:
+        title: Twitter Accounts
+    twitter_accounts:
+      admin:
+        twitter_accounts:
+          actions:
+            create_new: Maak een nieuwe Twitter Account
+            reorder: Wijzig de volgorde van de Twitter Accounts
+            reorder_done: Klaar met het wijzingen van de volgorde van de Twitter Accounts
+          records:
+            title: Twitter Accounts
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Twitter Accounts. Druk op 'Maak een nieuwe Twitter Account' om de eerste aan te maken.
+          twitter_account:
+            view_live_html: Bekijk deze twitter account op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze twitter account
+            delete: Verwijder deze twitter account voor eeuwig
+      twitter_accounts:
+        show:
+          other: Andere Twitter Accounts
+  activerecord:
+    attributes:
+      'refinery/twitter_accounts/twitter_account':
+        username: Username
+        tweet_count: Tweet Count

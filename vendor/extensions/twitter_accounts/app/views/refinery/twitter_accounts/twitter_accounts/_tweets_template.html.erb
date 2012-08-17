@@ -1,0 +1,7 @@
+<ul>
+  <% @json_tweets.each do |tweet| %>
+  	<li>
+  		<p><%=tweet['text'] %> <span>by</span> <a target= "_blank" href="https://twitter.com/<%=tweet['user']['screen_name'] %>"><%= tweet['user']['name'] %></a> <span>via</span> <%=tweet['source'].html_safe%></p>
+  	</li>
+  <% end %>
+</ul>

@@ -23,3 +23,9 @@ Refinery::SocialNetworks::Engine.load_seed
 
 # Added by Refinery CMS Perks extension
 Refinery::Perks::Engine.load_seed
+
+# Added by Refinery CMS Blog engine
+Refinery::Blog::Engine.load_seed
+
+# Added by Refinery CMS Twitter Accounts extension
+Refinery::TwitterAccounts::Engine.load_seed

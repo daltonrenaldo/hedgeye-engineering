@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      twitter_accounts:
+        title: Twitter Accounts
+    twitter_accounts:
+      admin:
+        twitter_accounts:
+          actions:
+            create_new: Lag en ny Twitter Account
+            reorder: Endre rekkefølgen på Twitter Accounts
+            reorder_done: Ferdig å endre rekkefølgen Twitter Accounts
+          records:
+            title: Twitter Accounts
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Twitter Accounts enda. Klikk på "Lag en ny Twitter Account" for å legge til din første twitter account.
+          twitter_account:
+            view_live_html: Vis hvordan denne twitter account ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne twitter account
+            delete: Fjern denne twitter account permanent
+      twitter_accounts:
+        show:
+          other: Andre Twitter Accounts
+  activerecord:
+    attributes:
+      'refinery/twitter_accounts/twitter_account':
+        username: Username
+        tweet_count: Tweet Count

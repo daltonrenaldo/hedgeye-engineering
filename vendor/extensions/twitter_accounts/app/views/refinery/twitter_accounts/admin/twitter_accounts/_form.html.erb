@@ -1,0 +1,23 @@
+<%= form_for [refinery, :twitter_accounts_admin, @twitter_account] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @twitter_account,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :username -%>
+    <%= f.text_field :username, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :tweet_count -%>
+    <%= f.number_field :tweet_count  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.twitter_accounts.admin.twitter_accounts.twitter_account'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @twitter_account.username) %>
+<% end -%>

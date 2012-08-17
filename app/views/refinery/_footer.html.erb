@@ -11,14 +11,7 @@
   
 	<section id="tweets" class="one-third column omega">
 		<h3><%= copywriting('tweets heading text', { :scope => 'footer', :default => 'recent tweets' }) %></h3>
-		<ul>
-			<li>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt <span>by</span> <a href="#">Johnny</a> <span>via</span> <a href="#">TweetDeck</a></p>
-			</li>
-			<li>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt <span>by</span> <a href="#">T-bone</a> <span>via</span> <a href="#">Tweetdroid</a></p>
-			</li>
-		</ul>
+    <%= render_tweets %>
 	</section>
 </div>
 <div class="row remove-bottom">

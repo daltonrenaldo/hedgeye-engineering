@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      twitter_accounts:
+        title: Twitter Accounts
+    twitter_accounts:
+      admin:
+        twitter_accounts:
+          actions:
+            create_new: Add New Twitter Account
+            reorder: Reorder Twitter Accounts
+            reorder_done: Done Reordering Twitter Accounts
+          records:
+            title: Twitter Accounts
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Twitter Accounts yet. Click "Add New Twitter Account" to add your first twitter account.
+          twitter_account:
+            view_live_html: View this twitter account live <br/><em>(opens in a new window)</em>
+            edit: Edit this twitter account
+            delete: Remove this twitter account forever
+      twitter_accounts:
+        show:
+          other: Other Twitter Accounts
+  activerecord:
+    attributes:
+      'refinery/twitter_accounts/twitter_account':
+        username: Username
+        tweet_count: Tweet Count

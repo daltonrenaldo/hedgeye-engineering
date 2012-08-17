@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      twitter_accounts:
+        title: Twitter Accounts
+#        article: masculino/femenino
+    twitter_accounts:
+      admin:
+        twitter_accounts:
+          actions:
+            create_new: Crear nuevo twitter account
+            reorder: Reordenar twitter accounts
+            reorder_done: Reordenación de twitter accounts completada
+          records:
+            title: Twitter Accounts
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay twitter accounts todavía. Pulsa en "Crear nuevo Twitter Account" para crear tu primer twitter account.
+          twitter_account:
+            view_live_html: Ver este twitter account como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este twitter account
+            delete: Borrar este twitter account para siempre
+      twitter_accounts:
+        show:
+          other: Otros twitter accounts
+  activerecord:
+    attributes:
+      'refinery/twitter_accounts/twitter_account':
+        username: Username
+        tweet_count: Tweet Count

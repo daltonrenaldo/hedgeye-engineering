@@ -1,0 +1,7 @@
+<section id='records'>
+  <%= render 'records' %>
+</section>
+<aside id='actions'>
+  <%= render 'actions' %>
+</aside>
+<%= render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::TwitterAccounts::Admin::TwitterAccountsController.sortable? and ::Refinery::TwitterAccounts::TwitterAccount.count > 1 %>

@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::TwitterAccounts::Admin::TwitterAccountsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.twitter_accounts_admin_twitter_accounts_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_twitter_accounts_admin_twitter_account_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::TwitterAccounts::Admin::TwitterAccountsController.sortable? && ::Refinery::TwitterAccounts::TwitterAccount.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Twitter Accounts"),
+                 refinery.twitter_accounts_admin_twitter_accounts_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Twitter Accounts"),
+                 refinery.twitter_accounts_admin_twitter_accounts_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
